@@ -1,0 +1,104 @@
+# 🦁 Lion App – Planilha de Controle de Dados para Imposto de Renda
+
+## 📘 Visão Geral
+
+O **Lion App** é uma solução desenvolvida em Excel para auxiliar contribuintes na organização de dados fiscais para a declaração de Imposto de Renda. Com uma interface intuitiva, validações automáticas e navegação simplificada, a ferramenta permite o controle eficiente de informações pessoais, bancárias e de rendimentos mensais.
+
+---
+
+## 🗂 Estrutura das Abas
+
+### 1️⃣ DADOS DO TITULAR
+
+📋 Cadastro completo da pessoa física
+
+**Campos incluídos:**
+- Nome completo
+- CPF
+- Data de nascimento
+- Título de eleitor
+- Cônjuge
+- Endereço completo e abreviado
+- CEP
+- Telefones (fixo e celular)
+- E-mail
+- Alterações de endereço anterior (Sim/Não)
+- Dependente cônjuge (Sim/Não)
+- Residente no exterior (Sim/Não)
+
+🔎 **Objetivo**: Centralizar os dados pessoais do titular de forma padronizada, com validações para garantir consistência.
+
+---
+
+### 2️⃣ INFORMES DE RENDIMENTOS BANCÁRIOS
+
+🏦 Registro dos informes bancários recebidos
+
+**Campos incluídos:**
+- Banco (com código e nome)
+- Valor atual declarado
+- Anexo do comprovante (PDF)
+
+**Funcionalidades:**
+- Totalizador automático dos valores declarados
+- Navegação entre bancos cadastrados
+- Botões de avanço e retorno entre abas
+
+🔎 **Objetivo**: Consolidar os rendimentos bancários para facilitar a declaração e garantir rastreabilidade dos documentos.
+
+---
+
+### 3️⃣ NOTAS BANCÁRIAS OU EXTRATO DE HOLERITES
+
+📆 Entradas mensais de receita
+
+**Campos incluídos:**
+- Data (mês/ano)
+- Categoria (ex: Holerite, Rendimento Extra, etc.)
+- Valor recebido
+
+**Funcionalidades:**
+- Tabela dinâmica para preenchimento mês a mês
+- Navegação entre registros anteriores
+
+🔎 **Objetivo**: Registrar receitas mensais detalhadas, permitindo o acompanhamento da evolução financeira ao longo do ano.
+
+---
+
+## 🧮 Recursos Técnicos Utilizados
+
+- Validação de Dados
+- Fórmulas Dinâmicas (SOMASE, PROCV, ÍNDICE, CORRESP)
+- Navegação com Hyperlinks
+- Interface visual com cores temáticas e ícones
+
+---
+
+## 📊 Instruções de Uso
+
+1. Acesse a aba **DADOS DO TITULAR** e preencha todos os campos obrigatórios.
+2. Prossiga para **INFORMES DE RENDIMENTOS BANCÁRIOS** e registre os dados de cada banco.
+3. Em **NOTAS BANCÁRIAS**, insira os valores recebidos mês a mês, categorizando corretamente.
+4. Utilize os botões de navegação para transitar entre abas.
+5. Verifique os totais e consolidações para garantir que todas as informações estejam completas.
+
+---
+
+## 💡 Observações Importantes
+
+- A planilha é uma ferramenta de apoio e não substitui a orientação de um contador.
+- Os dados podem ser personalizados conforme o perfil do usuário.
+- Recomenda-se manter os comprovantes anexados e atualizados.
+
+---
+
+## 📈 Evoluções Futuras
+
+- Gráficos automáticos por tipo de rendimento
+- Importação de dados via API ou integração com bancos
+- Alertas de pendências fiscais e vencimentos
+- Exportação para formatos compatíveis com softwares de declaração
+
+---
+
+© Desenvolvido por SYSTEM BY SABINO™ 💜
