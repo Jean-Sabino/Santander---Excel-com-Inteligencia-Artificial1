@@ -1,0 +1,95 @@
+# 📈 Painel de Vendas de Assinaturas – Análise por Tipo de Plano
+
+## 📘 Descrição do Projeto
+
+Este projeto tem como objetivo organizar e visualizar os dados de vendas de assinaturas digitais, com foco em planos como EA Play e Minecraft Season Pass. A proposta é transformar dados brutos em respostas claras para perguntas de negócio, permitindo decisões estratégicas baseadas em evidências.
+
+---
+
+## 🎯 Objetivos
+
+- Consolidar o faturamento total por tipo de plano
+- Separar vendas com e sem auto renovação
+- Analisar o desempenho de produtos específicos (EA Play, Minecraft)
+- Gerar insights rápidos para tomada de decisão
+
+---
+
+## 🧩 Perguntas de Negócio Respondidas
+
+### 1️⃣ Qual o faturamento total de vendas de planos mensais?
+
+| Tipo de Plano | Faturamento |
+|---------------|-------------|
+| Core          | R$ 2.824,00 |
+| Standard      | R$ 533,00   |
+| **Total**     | R$ 3.357,00 |
+
+---
+
+### 2️⃣ Qual o faturamento total de vendas mensais sem auto renovação?
+
+| Tipo de Plano | Faturamento |
+|---------------|-------------|
+| Core          | R$ 1.000,00 |
+| Standard      | R$ 350,00   |
+| **Total**     | R$ 1.350,00 |
+
+---
+
+### 3️⃣ Total de vendas de assinaturas do EA Play Season Pass
+
+| Tipo de Plano | Vendas |
+|---------------|--------|
+| Core          | 900    |
+| Standard      | 450    |
+| **Total**     | 1.350  |
+
+---
+
+### 4️⃣ Total de vendas de assinaturas do Minecraft Season Pass
+
+| Tipo de Plano | Faturamento |
+|---------------|-------------|
+| Core          | R$ 900,00   |
+| Standard      | R$ 900,00   |
+| **Total**     | R$ 1.800,00 |
+
+---
+
+## 🧮 Recursos Utilizados
+
+- Tabelas dinâmicas para agregação de dados
+- Segmentação por tipo de plano e renovação
+- Fórmulas de soma e filtros personalizados
+- Layout visual para facilitar leitura e análise
+
+---
+
+## 📌 Instruções de Uso
+
+1. Atualize a base de dados com novas vendas
+2. Use os filtros para separar planos por tipo e renovação
+3. Consulte os totais por produto para análise de desempenho
+4. Gere relatórios com base nas perguntas de negócio
+
+---
+
+## 💡 Observações
+
+- Os dados podem ser adaptados para outros produtos ou serviços
+- Ideal para gestores de produto, analistas comerciais e empreendedores digitais
+- Pode ser integrado a dashboards visuais ou plataformas de BI
+
+---
+
+## 🚀 Evoluções Futuras
+
+- Gráficos comparativos por período
+- Análise de churn e retenção
+- Integração com plataformas de pagamento
+- Exportação automática de relatórios
+
+---
+
+© Desenvolvido por SYSTEM BY SABINO™ 💜
