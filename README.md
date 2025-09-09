@@ -5,57 +5,91 @@ Este projeto é uma planilha em Excel para simulação de investimentos em Fundo
 ---
 
 ## 🚀 Funcionalidades
-- Seleção de perfil de investidor (**Conservador, Moderado, etc.**).
-- Alocação automática em FIIs: **Papel, Tijolo, Híbridos e FOFs**.
-- Cálculo do **valor total investido por categoria**.
-- Simulação de **crescimento patrimonial** com rendimento mensal.
-- Estimativa de **dividendos mensais** a partir do Dividend Yield anual.
-- Dashboard interativo na aba **APP**.
+
+* Seleção de perfil de investidor (**Conservador, Moderado, Agressivo, etc.**) via lista suspensa.
+* Alocação automática em FIIs: **Papel, Tijolo, Híbridos e FOFs**.
+* Cálculo do **valor total investido por categoria**.
+* Simulação de **crescimento patrimonial** com rendimento mensal.
+* Estimativa de **dividendos mensais** a partir do Dividend Yield anual.
+* Dashboard interativo na aba **APP**.
 
 ---
 
 ## 📂 Estrutura da Planilha
-- **APP** → Interface principal de simulação, onde o usuário insere valores e vê os resultados.
-- **Planilha2** → Matriz de alocação de percentuais por perfil de investidor.
+
+* **APP** → Interface principal de simulação, onde o usuário insere valores e vê os resultados.
+* **Planilha2** → Matriz de alocação de percentuais por perfil de investidor.
+* **Dados** → Fonte para listas suspensas (como seleção de perfil) e dados auxiliares.
 
 ---
 
-## 🧮 Fórmulas Utilizadas
-- **Alocação por categoria**
-  ```
-  Valor_Total × Percentual
-  ```
-- **Patrimônio acumulado**
-  ```
-  Valor_Anterior × (1 + Taxa_Mensal)
-  ```
-- **Dividendos mensais**
-  ```
-  Patrimônio × (Dividend_Yield_Anual ÷ 12)
-  ```
+## 🧮 Fórmulas e Recursos Utilizados
+
+* **Valor Futuro do Investimento (VF)**:
+
+```excel
+=VF(taxa_mensal; qtd_anos*12; aporte*-1)
+```
+
+Exemplo na planilha:
+
+```excel
+=VF($D$19; $A24*12; $D$17*-1)
+```
+
+* `$D$19` → taxa de rendimento mensal;
+
+* `$A24` → quantidade de anos da simulação;
+
+* `$D$17` → valor do aporte mensal (negativo por convenção do Excel).
+
+* **Estimativa de dividendos mensais**:
+
+```excel
+=VALOR_INVESTIDO*DIVIDEND_YIELD_ANUAL/12
+```
+
+* **Alocação por categoria**:
+
+```excel
+=VALOR_TOTAL*PERCENTUAL_CATEGORIA
+```
+
+* **Lista suspensa (Validação de Dados)**:
+  Permite a seleção do **perfil do investidor** diretamente na aba **APP**, garantindo que apenas opções válidas sejam escolhidas.
+* Fonte da lista: aba **Dados**.
 
 ---
 
-## 📖 Exemplo de Uso
-Se um investidor aplicar **R$ 100.000,00** no perfil **Conservador**:
+## 📊 Como Utilizar
 
-- Papel (30%) → R$ 30.000  
-- Tijolo (50%) → R$ 50.000  
-- Híbridos (10%) → R$ 10.000  
-- FOFs (10%) → R$ 10.000  
-
-Com **rendimento de 0,8% ao mês** e **dividend yield de 10% ao ano**:
-- Patrimônio mês 1 = R$ 100.800  
-- Dividendos mês 1 = R$ 833  
+1. Abra a aba **APP**.
+2. Selecione seu **perfil de investidor** na lista suspensa.
+3. Insira o **valor total a investir**.
+4. Visualize a **alocação automática** nos FIIs.
+5. Acompanhe o **crescimento do patrimônio** e os **dividendos mensais**.
+6. Ajuste os parâmetros para testar diferentes cenários de investimento.
 
 ---
 
-## ⚠️ Pontos de Atenção
-- Atualize sempre as taxas de rendimento e dividend yield de acordo com o mercado.  
-- Não altere a aba **Planilha2** sem conhecimento técnico.  
-- Use a aba **APP** como interface principal de simulação.  
+## 💡 Observações
+
+* A planilha é **uma ferramenta de simulação** e não substitui orientação financeira profissional.
+* Os valores de dividendos e rendimentos são **estimativas** baseadas nos dados informados.
+* É possível expandir a planilha incluindo **novos FIIs, cenários de aportes mensais e reajustes de dividendos**.
 
 ---
 
-## 📌 Histórico de Alterações
-- v1.0 – 09/09/2025 – Criação inicial do simulador e documentação.
+## 🛠 Tecnologias
+
+* **Excel** → Fórmulas e cálculos automáticos.
+* **Power Query (opcional)** → Importação e atualização de dados históricos de FIIs.
+* **Dashboard interativo** → Visualização clara da alocação, patrimônio e dividendos.
+
+---
+
+## 📈 Próximas Evoluções
+
+* Inclusão de **gráficos dinâmicos** por categoria.
+* Simulação de **aporte mensal recorrente**.
+* Integração com **dados de mercado em tempo real** via Power Query ou API.
